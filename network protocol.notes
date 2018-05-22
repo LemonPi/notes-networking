@@ -30,5 +30,8 @@
     Internet terminology
 -----------------------------------------------------------
 port: identifier to differentiate multiple endpoints on the same IP address (virtualization)
-socket: (for a TCP socket) endpoint instance with IP + port
+socket: (for a TCP socket) endpoint instance with IP + port 
+	- some nuance here where IP + port cannot identify a socket
+		- socket is different from the endpoint of a particular connection
+	- may participate in many connections to different sockets
 connection: a combination of 2 endpoints / sockets
