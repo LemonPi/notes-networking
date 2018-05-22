@@ -6,11 +6,22 @@
 	- each layer attaches a header (and optionally a footer) to facilitate logistics
 - content transmitted as a unit at a specific layer is called the #protocol data unit (PDU)
 	- full content of each layer becomes the data of the next, lower layer
+	- one PDU of a higher level can map to multiple PDUs of a lower one
 
 -----------------------------------------------------------
 	Internet Layers
 -----------------------------------------------------------
 4. application
+	eg. HTTP (www), SMTP (email), FTP (file transfer), SSH
 3. transport
+	- TCP
+		- PDU is segment
+	- UDP
+		- PDU is datagram
 2. internet
+	- IP
+		- PDU is datagram 
+		(or called packet - packet is just a generic term for some PDU of either the transport or internet layer)
 1. link
+	eg. Wifi, Bluetooth, Ethernet
+		- PDU is link
