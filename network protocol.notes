@@ -13,18 +13,26 @@
 -----------------------------------------------------------
 4. application
 	eg. HTTP (www), SMTP (email), FTP (file transfer), SSH
+		- PDU and representation are application defined
+	- communicate user data
+	- is provided pipes to other processes by the transport layer
 3. transport
 	- TCP
 		- PDU is segment
 	- UDP
 		- PDU is datagram
+	- delivers data to correct process on host computers through multiplexing with sockets
 2. internet
 	- IP
 		- PDU is datagram 
 		(or called packet - packet is just a generic term for some PDU of either the transport or internet layer)
+	- exchanges data across network boundaries
+		- moving data between LANs
+		- routers
 1. link
 	eg. Wifi, Bluetooth, Ethernet
 		- PDU is link
+	- exchanges data within a LAN
 
 -----------------------------------------------------------
     Internet terminology
