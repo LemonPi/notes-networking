@@ -1,0 +1,7 @@
+-----------------------------------------------------------
+    Overall Principles
+-----------------------------------------------------------
+- hierarchical layer of concerns
+	- highest level has the purest content (application data)
+	- each layer attaches a header (and optionally a footer) to facilitate logistics
+	- full content of each layer becomes the data of the next, lower layer
