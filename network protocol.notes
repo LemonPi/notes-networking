@@ -25,3 +25,10 @@
 1. link
 	eg. Wifi, Bluetooth, Ethernet
 		- PDU is link
+
+-----------------------------------------------------------
+    Internet terminology
+-----------------------------------------------------------
+port: identifier to differentiate multiple endpoints on the same IP address (virtualization)
+socket: (for a TCP socket) endpoint instance with IP + port
+connection: a combination of 2 endpoints / sockets
