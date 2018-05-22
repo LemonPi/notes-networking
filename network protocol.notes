@@ -4,4 +4,13 @@
 - hierarchical layer of concerns
 	- highest level has the purest content (application data)
 	- each layer attaches a header (and optionally a footer) to facilitate logistics
+- content transmitted as a unit at a specific layer is called the #protocol data unit (PDU)
 	- full content of each layer becomes the data of the next, lower layer
+
+-----------------------------------------------------------
+	Internet Layers
+-----------------------------------------------------------
+4. application
+3. transport
+2. internet
+1. link
