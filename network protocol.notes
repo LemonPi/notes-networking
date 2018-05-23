@@ -26,6 +26,10 @@
 	- IP
 		- PDU is datagram 
 		(or called packet - packet is just a generic term for some PDU of either the transport or internet layer)
+		- unrealiable, best-effort delivery
+		- connectionless
+		- each packet is treated independently
+		- network maintains no state based on path of prior packets
 	- exchanges data across network boundaries
 		- moving data between LANs
 		- routers
@@ -33,6 +37,9 @@
 	eg. Wifi, Bluetooth, Ethernet
 		- PDU is link
 	- exchanges data within a LAN
+- application programmers should only be concerned with interfaces in the application and transport layer
+	- layers below are services provided by TCP/IP stack in the OS
+	- IP implementations are available through sockets
 
 -----------------------------------------------------------
     Internet terminology
