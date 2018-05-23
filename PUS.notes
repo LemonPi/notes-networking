@@ -1,0 +1,13 @@
+-----------------------------------------------------------
+    Overview
+-----------------------------------------------------------
+- packet utilization standard
+- used in space
+	- telemetry (receive info from spacecraft)
+	- telecontrol (request actions)
+- defines services between onboard and ground applications
+	- an onboard application process is source of telemetry and sink of telecommand packets
+		- each has a unique ID called Application Process ID (APID)
+	- can be veiwed as a set of onboard functions
+	- 17 services
+		- cover most frequent needs in operation
