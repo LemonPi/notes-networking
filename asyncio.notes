@@ -1,0 +1,43 @@
+-----------------------------------------------------------
+    Components
+-----------------------------------------------------------
+- event loop
+	- waits for something to happen and then acts on the event
+- coroutines
+	- event handler
+	- special function that gives up control without losing state
+	- extension of a generator
+	- advantage of not using much memory
+	- call to it returns coroutine object
+		- executed by event loop
+- future
+	- object representing result of work to be done
+	- event loop watch futures and wait for them to finish
+- task
+	- coroutine wrapper
+	- subclass of Future
+	- can be scheduled with event loop
+
+-----------------------------------------------------------
+    async and await
+-----------------------------------------------------------
+- used to define native coroutine
+	- async def coroutine():
+
+-----------------------------------------------------------
+    Tasks
+-----------------------------------------------------------
+- subclass of Future
+	- wrapper around a coroutine
+	- track when coroutine finishes processing
+	- other coroutines can take the result of a task after processing
+- tasks are meant for long-running background coroutines
+- can be cancelled
+
+-----------------------------------------------------------
+    delays
+-----------------------------------------------------------
+- event loop can call functions with delays
+	- loop.call_soon
+	- loop.call_later
+
