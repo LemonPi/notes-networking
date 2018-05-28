@@ -47,3 +47,14 @@
 	- loop.call_soon
 	- loop.call_later
 
+-----------------------------------------------------------
+    asyncio.ensure_future vs BaseEventLoop.create_task
+-----------------------------------------------------------
+- both create Task from coroutine
+- use ensure_future if input could be a coroutine or a Future
+	- want result to for sure be a Future
+		eg. to call cancel()
+	- provide an API that accepts either a coroutine or a Future
+- use create_task if input is a coroutine
+	- third party event loops can use their own subclass of Task
+		- so should not construct Task object with constructor
