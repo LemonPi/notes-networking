@@ -3,6 +3,9 @@
 -----------------------------------------------------------
 - event loop
 	- waits for something to happen and then acts on the event
+	- registers, executes, and cancels delayed calls
+	- delegates function calls to a pool of threads
+	- creates subprocesses and transports for communication with another program
 - coroutines
 	- event handler
 	- special function that gives up control without losing state
