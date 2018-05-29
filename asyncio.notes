@@ -98,6 +98,7 @@
 			- transport dependent methods for getting data
 - coroutines can be scheduled but cannot be awaited inside protocols
 	- use stream objects instead for reliable execution order
+	- for UDP, can create actual handler as coroutine which the callback schedules
 
 -----------------------------------------------------------
     Streams
@@ -113,3 +114,6 @@
 		- exposes write*, close of transport
 	- adds drain() which is a coroutine
 		- to be called after write and can be awaited
+- inherently ordered
+	- only suitable for TCP or other ordered communication
+	- does not support UDP
