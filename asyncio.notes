@@ -31,6 +31,20 @@
 	- can just `await` instead
 
 -----------------------------------------------------------
+    Coroutines
+-----------------------------------------------------------
+- 2 different related concepts
+	- function defining a coroutine
+		- async def 
+		- @asyncio.coroutine
+	- object obtained by calling a coroutine function
+- must be scheduled
+	- does not run when called
+	- await or yield from another coroutine
+	- ensure_future or create_task
+
+
+-----------------------------------------------------------
     Tasks
 -----------------------------------------------------------
 - subclass of Future
@@ -58,3 +72,4 @@
 - use create_task if input is a coroutine
 	- third party event loops can use their own subclass of Task
 		- so should not construct Task object with constructor
+
