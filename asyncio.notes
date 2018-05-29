@@ -98,3 +98,18 @@
 			- transport dependent methods for getting data
 - coroutines can be scheduled but cannot be awaited inside protocols
 	- use stream objects instead for reliable execution order
+
+-----------------------------------------------------------
+    Streams
+-----------------------------------------------------------
+- higher level concept than transports and protocols
+	- meant to integrate them into async programming
+	- results in much cleaner code
+		- no implicit callbacks
+- StreamReader
+	- coroutines for all read* functions
+- StreamWriter
+	- wraps a transport
+		- exposes write*, close of transport
+	- adds drain() which is a coroutine
+		- to be called after write and can be awaited
