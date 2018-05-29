@@ -73,3 +73,28 @@
 	- third party event loops can use their own subclass of Task
 		- so should not construct Task object with constructor
 
+-----------------------------------------------------------
+    Transports and Protocols
+-----------------------------------------------------------
+- callback based API
+- transports abstract communication channels
+	eg. TCP, UDP, SSL, subprocess pipes
+	- not instantiated directly by user
+		- let AbstractEventLoop method create it
+	- always paired with a protocol instance
+		- protocol can call the transport's methods
+		- events occurring on the transport triggers protocol's callbacks
+- protocols are user defined classes to parse incoming data and ask for outgoing data
+	- can subclass asyncio base classes
+	- should provide implementation for certain callbacks
+		- called by transport on certain events
+		- connection_made(transport)
+			- store transport
+			- no other callback will be called before this
+		- connection_lost(exc)
+			- exception or None for normal termination
+			- no other callback will be called after this
+		- pipe_data_received / data_recieved / datagram_received
+			- transport dependent methods for getting data
+- coroutines can be scheduled but cannot be awaited inside protocols
+	- use stream objects instead for reliable execution order
