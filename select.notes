@@ -7,3 +7,18 @@
 - works on file types
 	- on Windows only works on sockets
 - use if precise control over OS-level primitives needed
+
+-----------------------------------------------------------
+    poll
+-----------------------------------------------------------
+- return poll object
+	- register and unregister file descriptor
+- scales better than select
+	- only requires file descriptors of interest vs full bitmap
+	- O(number of file descriptors)
+- register(fd)
+	- future calls to poll will check this fd for pending I/O events
+- poll([timeout])
+	- get list of (fd, event)
+	- timeout is ms to wait for events before returning
+		- non-positive value means block until first event
