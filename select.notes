@@ -1,0 +1,9 @@
+-----------------------------------------------------------
+    Overview
+-----------------------------------------------------------
+- API to system calls
+	- select()
+	- poll()
+- works on file types
+	- on Windows only works on sockets
+- use if precise control over OS-level primitives needed
