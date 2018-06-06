@@ -22,3 +22,14 @@
 	- get list of (fd, event)
 	- timeout is ms to wait for events before returning
 		- non-positive value means block until first event
+
+-----------------------------------------------------------
+    select
+-----------------------------------------------------------
+- takes (rlist, wlist, xlist, [timeout])
+	- rlist includes fd for wait until reading for reading
+	- wlist same thing for writing
+	- timeout is number of seconds to block
+		- omitted means to block until first fd ready
+		- timeout of 0 is a poll
+- returns 3 lists corresponding to the input
