@@ -1,0 +1,8 @@
+-----------------------------------------------------------
+    Overview
+-----------------------------------------------------------
+- high level and efficient I/O multiplexing
+- built on top of select
+- DefaultSelector is alias to most efficient implementation on platform
+	- underlying are Select, Poll, Epoll, Devpoll, and Kqueue Selector subclasses
+- API consists of methods on a BaseSelector instance
