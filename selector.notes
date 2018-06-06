@@ -6,3 +6,11 @@
 - DefaultSelector is alias to most efficient implementation on platform
 	- underlying are Select, Poll, Epoll, Devpoll, and Kqueue Selector subclasses
 - API consists of methods on a BaseSelector instance
+
+-----------------------------------------------------------
+    select
+-----------------------------------------------------------
+- returns list of (key, events)
+- same timeout behaviour as for select
+- difference between select is that this is an object method than module method
+	- can register different fd on different Selectors
