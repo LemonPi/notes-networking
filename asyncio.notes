@@ -117,3 +117,9 @@
 - inherently ordered
 	- only suitable for TCP or other ordered communication
 	- does not support UDP
+
+-----------------------------------------------------------
+    Queue
+-----------------------------------------------------------
+- coordinates producer and consumer coroutines
+- put and get are coroutines
